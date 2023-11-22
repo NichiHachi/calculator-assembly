@@ -14,7 +14,7 @@ section .data
     messageVerifyFalseLen equ $ - messageVerifyFalse
     messageResult db "Result: ", 0
     messageResultLen equ $ - messageResult
-    messageDivideZero db "Well played but you can't divide by 0 :)", 0
+    messageDivideZero db "Well played but you can't divide by 0 :)", 0xA
     messageDivideZeroLen equ $ - messageResult
     newline db "-----------------------", 0xA
     newlineLen equ $ - newline
