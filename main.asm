@@ -156,10 +156,11 @@ _askOperation:
     cmp rax, 0 ; if the number is powered by 0, change it to 1
     je .isZeroPower
     mov r8, rax
-    mov rax, qword [result]
+    mov r9, qword [result]
     .power:
         cmp r8, 1
         je .printResult
+        mov rax, r9
         call _multiplyByRAX
         dec r8
         jmp .power
